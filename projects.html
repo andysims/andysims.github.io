@@ -20,9 +20,19 @@
   <ul>
     <li>Automation <i>(I will continue to add more projects)</i></li>
     <ul>
-      <li><a href="https://github.com/andysims/Work/blob/master/Eckersall/DataProcessing/py/exportCensusKMZs.py">Export KMZs</a></li>
+      <li><a href="https://github.com/andysims/Work/blob/master/Eckersall/DataProcessing/py/exportCensusKMZs.py">Export Census KMZs</a></li>
       <ul>
         <li>Python script that: Reads and compares nationwide census blocks (Postgres) to client's eligible blocks (CSV). Generates directories for each state. Grabs county fips codes to generate names of KMZ files (ex: CA_LosAngeles.kmz). Using ArcPy, I setup the MXD, set definition queries hitting tables in Postgres, which then spits out a KMZ file for all counties in the U.S. where eligible.</li>
+      </ul>
+      <li><a href="https://github.com/andysims/Work/blob/master/Eckersall/DataProcessing/py/studyAreasKMZ.py">Export Study Area KMZs</a></li>
+      <ul>
+        <li>Python script that: Reads incoming CSV file of companies and their study areas to generate KMZ files. Use ArcPy to set definition query, hit Postgres tables, then exports  a KMZ file for each company.</li>
+        <ul>
+          <li><a href="https://github.com/andysims/Work/blob/master/Eckersall/DataProcessing/py/studyAreasProcessedCheck.py">Study Area Check</a></li>
+          <ul>
+            <li>Runs through directory to ensure each company successfully had a KMZ exported.</li>
+          </ul>
+        </ul>
       </ul>
     </ul>
     <br>
